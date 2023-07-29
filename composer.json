@@ -1,0 +1,22 @@
+{
+    "name": "chbrus/cafecito",
+    "description": "Este repositorio tendrá la finalidad de que pueda poner en práctica mis conocimientos tango con PHP, Composer, y uno que otro framework",
+    "require": {
+        "vlucas/phpdotenv": "^5.5"
+    },
+    "require-dev": {
+        "vlucas/phpdotenv": "^5.5"
+    },
+    "license": "Apache License",
+    "autoload": {
+        "psr-4": {
+            "Chbrus\\Cafecito\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "ChBrus",
+            "email": "cbruno.carrillo@gmail.com"
+        }
+    ]
+}
