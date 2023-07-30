@@ -10,8 +10,11 @@
     "license": "Apache License",
     "autoload": {
         "psr-4": {
-            "Chbrus\\Cafecito\\": "src/"
-        }
+            "DB\\": "src/models/core/"
+        },
+        "files": [
+            "src/controllers/functions/Icons.php"
+        ]
     },
     "authors": [
         {
