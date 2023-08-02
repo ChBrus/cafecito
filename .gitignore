@@ -103,3 +103,7 @@ $RECYCLE.BIN/
 src/assets/images/*.jpg
 src/assets/images/*.jpeg
 src/assets/images/*.png
+
+# PHPUnit
+tests/
+*.cache

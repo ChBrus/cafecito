@@ -13,5 +13,9 @@
 
             $this->mysqlData = new mysqli($_ENV['DB_Host'], $_ENV['DB_Name'], $_ENV['DB_Password'], $_ENV['DB'], $_ENV['DB_Port']);
         }
+
+        public function printDB() {
+            return $this->mysqlData;
+        }
     }
 ?>
