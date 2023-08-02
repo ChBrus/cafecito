@@ -1,0 +1,27 @@
+// Custom variables
+$primary: #ddd0b8;
+$secondary: #9c7354;
+$dark: #2f241c;
+$light: #f3f6f2;
+$third: #b2a089;
+$body-color: $light;
+$body-bg: $primary;
+
+$theme-colors: (
+    "primary": $primary,
+    "secondary": $secondary,
+    "dark": $dark,
+    "light": $light,
+    "third": $third,
+    "body-color": $body-color,
+    "body-bg": $body-bg
+);
+
+// Offcanvas custom
+$offcanvas-horizontal-width: 200px;
+
+// Body custom
+$body-font-size: 3vh;
+
+// Importa las funciones de Bootstrap para utilizarlas en tus variables
+@import '../../../vendor/twbs/bootstrap/scss/bootstrap.scss';

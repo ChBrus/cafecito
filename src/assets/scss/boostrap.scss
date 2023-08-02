@@ -1,0 +1,12 @@
+@import './custom-variables';
+
+.icon-custom {
+    color: $light;
+    transition: 0.5s;
+}
+
+.icon-custom:focus,
+.icon-custom:active,
+.icon-custom:hover {
+    color: $dark;
+}
