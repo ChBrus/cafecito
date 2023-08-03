@@ -1,27 +1,34 @@
 # El Cafecito
 
-El Cafecito es un local de café del cual trata este repositorio. A pesar de que en este momento se enfocará más en el desarrollo frontend que en el backend, tengo planeado poner en práctica mis habilidades en PHP, Composer y bases de datos, particularmente MySQL.
+El Cafecito es un repositorio que representa un apasionante proyecto enfocado en un local de café virtual. Actualmente, su enfoque principal es el desarrollo frontend, donde planeo aplicar y mejorar mis habilidades en tecnologías como PHP, Composer y bases de datos, en particular MySQL.
 
-- [Instalar](./#Instalar "Instalar")
+## Índice
+- [Instalación](#instalación)
+- [Derechos de autor](#derechos-de-autor)
 
-# Instalar
-Primero necesitas forkear el repositorio. Después de hacer fork a este repositorio, deberás hacer pull desde tu repositorio forkeado a tu computadora.
+## Instalación
+Para utilizar este proyecto, sigue los siguientes pasos:
+
+- Realiza un "fork" de este repositorio para crear una copia en tu cuenta de GitHub.
+- Clona el repositorio forkeado en tu máquina local utilizando el siguiente comando de Git:
 
 `git clone <url>`
 
-Ya que tienes el repositorio en tu máquina deberás instalar todas las dependencias con el manejador de paquetes **Composer**.
+- Una vez que tengas el repositorio en tu máquina, instala todas las dependencias con el manejador de paquetes Composer:
 
 `composer install`
 
-Ahora creado todo, para que el sitio web sea "funcional" necesitarás de una base de datos, en sí puedes crear cualquiera que pueda agarrar la clase **mysqli**, y para conectarla al programa necesitas crear un archivo `.env`, en ese archivo pondrás la siguiente estructura:
+- Para que el sitio web sea "funcional", necesitarás una base de datos compatible con la clase **mysqli**. Crea un archivo `.env` con la siguiente estructura y configura la conexión a la base de datos:
 
-    DB_Host='<host>'
-    DB_Name='<username>'
-    DB_Password='<password>'
-    DB='<data base name>'
-    DB_Port='<port>'
+```
+DB_Host='<host>'
+DB_Name='<username>'
+DB_Password='<password>'
+DB='<data base name>'
+DB_Port='<port>'
+```
 
-Hasta el momento eso es lo necesario para que pueda "funcionar" mi sitio web en tu página, sigue esperando más actualizaciones 😄.
+Con estos pasos, el sitio web debería estar "funcional" en tu página local. ¡Sigue esperando más actualizaciones emocionantes mientras el proyecto sigue en desarrollo! 😄
 
 # Derechos de autor
 Para obtener más información, por favor haga clic [aquí](https://www.instagram.com/elcafecito.01/).

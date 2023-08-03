@@ -4,24 +4,32 @@ $secondary: #9c7354;
 $dark: #2f241c;
 $light: #f3f6f2;
 $third: #b2a089;
+$fourth: #7a5135;
 $body-color: $light;
 $body-bg: $primary;
 
 $theme-colors: (
     "primary": $primary,
     "secondary": $secondary,
+    "third": $third,
+    "fourth": $fourth,
     "dark": $dark,
     "light": $light,
-    "third": $third,
     "body-color": $body-color,
-    "body-bg": $body-bg
+    "body-bg": $body-bg,
+);
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 2000px
 );
 
 // Offcanvas custom
 $offcanvas-horizontal-width: 200px;
-
-// Body custom
-$body-font-size: 3vh;
 
 // Importa las funciones de Bootstrap para utilizarlas en tus variables
 @import '../../../vendor/twbs/bootstrap/scss/bootstrap.scss';

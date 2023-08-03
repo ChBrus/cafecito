@@ -17,9 +17,7 @@
             "WebTools\\": "src/controllers/classes/"
         },
         "files": [
-            "src/controllers/functions/Icons.php",
-            "src/controllers/functions/Styles.php",
-            "src/controllers/functions/Scripts.php"
+            "src/controllers/functions/Icons.php"
         ]
     },
     "authors": [

@@ -1,5 +1,9 @@
 @import './custom-variables';
 
+h1 {
+    font-family: "Times New Roman", Times, serif;
+}
+
 .icon-custom {
     color: $light;
     transition: 0.5s;
@@ -9,4 +13,10 @@
 .icon-custom:active,
 .icon-custom:hover {
     color: $dark;
+}
+
+@media (max-width: map-get($grid-breakpoints, sm)) {
+    .navbar-expand-xxl .offcanvas, .navbar-expand-xxl .offcanvas-end {
+      width: 100%;
+    }
 }
