@@ -1,5 +1,7 @@
 <?php
     namespace WebTools;
+    
+    $HOME = substr($_SERVER['SCRIPT_FILENAME'], 0, strpos($_SERVER['SCRIPT_FILENAME'], '/cafecito/') + 10);
 
     class PageBuilder{
         public static function buildHeader() {
@@ -23,13 +25,13 @@
                             <div class="offcanvas-body" id="canvas-body">
                                 <ul class="nav nav-pills flex-column">
                                     <li class="nav-item">
-                                        <a class="nav-link" href="/public/">Home</a>
+                                        <a class="nav-link" href="<?= self::HOME() ?>public/">Home</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="/public/menu/">Menú</a>
+                                        <a class="nav-link" href="<?= self::HOME() ?>public/menu/">Menú</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="/public/pre-ordenar/">Pre-ordenar</a>
+                                        <a class="nav-link" href="<?= self::HOME() ?>public/pre-ordenar/">Pre-ordenar</a>
                                     </li>
                                 </ul>
                             </div>
@@ -43,8 +45,8 @@
         public static function setScripts() {
             ob_start();
             ?>
-                <script src="/vendor/twbs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-                <script src="/src/assets/js/canvasBody.js"></script>
+                <script src="<?= self::HOME() ?>vendor/twbs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+                <script src="<?= self::HOME() ?>src/assets/js/canvasBody.js"></script>
             <?php
             return ob_get_clean();
         }
@@ -52,10 +54,14 @@
         public static function setCustomBootstrap() {
             ob_start();
             ?>
-            <link rel="stylesheet" href="/src/assets/css/boostrap.css">
-            <link rel="stylesheet" href="/src/assets/css/bootstrap-icons.css">
+            <link rel="stylesheet" href="<?= self::HOME() ?>src/assets/css/boostrap.css">
+            <link rel="stylesheet" href="<?= self::HOME() ?>src/assets/css/bootstrap-icons.css">
             <?php
             return ob_get_clean();
+        }
+
+        public static function HOME() {
+            return $_SERVER['HTTP_HOST'] === 'cafecito.com' ? '/' : '/cafecito/';
         }
     }
 ?>

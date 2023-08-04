@@ -1,5 +1,5 @@
 <?php
-    require $_SERVER['DOCUMENT_ROOT'] . '/vendor/autoload.php';
+    require $_SERVER['DOCUMENT_ROOT'] . ($_SERVER['HTTP_HOST'] === 'cafecito.com' ? '' : '/cafecito/') . '/vendor/autoload.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
