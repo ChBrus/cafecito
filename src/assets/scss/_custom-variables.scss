@@ -5,6 +5,7 @@ $dark: #2f241c;
 $light: #f3f6f2;
 $third: #b2a089;
 $fourth: #7a5135;
+$info: #8abdca;
 $body-color: $light;
 $body-bg: $primary;
 
@@ -15,6 +16,7 @@ $theme-colors: (
     "fourth": $fourth,
     "dark": $dark,
     "light": $light,
+    "info": $info,
     "body-color": $body-color,
     "body-bg": $body-bg,
 );
@@ -30,6 +32,19 @@ $grid-breakpoints: (
 
 // Offcanvas custom
 $offcanvas-horizontal-width: 200px;
+
+// btn-close configuration
+$btn-close-width: 1.1em;
+$btn-close-color: $light;
+
+// nav-link active
+$nav-pills-link-active-bg: $third;
+$nav-pills-link-active-color: $light;
+$dropdown-link-hover-color: $light;
+$dropdown-link-hover-bg: $dark;
+
+// Spinner
+$spinner-width: 5rem;
 
 // Importa las funciones de Bootstrap para utilizarlas en tus variables
 @import '../../../vendor/twbs/bootstrap/scss/bootstrap.scss';

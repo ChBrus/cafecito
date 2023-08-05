@@ -1,12 +1,12 @@
 <?php
-    require './functions.php';
+    require '../functions.php';
 
     //The url you wish to send the POST request to
-    $url = $_SERVER['HTTP_HOST'] . getSecondSlash($_SERVER['REQUEST_URI'], $_SERVER['HTTP_HOST']) . 'pages/home.php';
+    $url = $_SERVER['HTTP_HOST'] . getSecondSlash($_SERVER['REQUEST_URI'], $_SERVER['HTTP_HOST']) . 'pages/pre-ordenar.php';
 
     //The data you want to send via POST
     $fields = [
-        'DIRECTORY' => substr($_SERVER['PHP_SELF'], 0, strpos($_SERVER['PHP_SELF'], 'index.php'))
+        'DIRECTORY' => substr($_SERVER['PHP_SELF'], 0, strpos($_SERVER['PHP_SELF'], 'pre-ordenar/index.php'))
     ];
 
     //url-ify the data for the POST
