@@ -1,0 +1,22 @@
+$color-mode-type: data;
+
+@include color-mode(dark) {
+    // Aquí redefine las variables de color para el modo "dark"
+    $primary: #6b5f4b;
+    $secondary: #4c2c17;
+    $dark: #1c150f;
+    $light: #d6d9d2;
+    $third: #998d74;
+    $fourth: #54351f;
+    $info: #7aa6b2;
+    $body-color: $light;
+    $body-bg: $primary;
+
+    $carousel-dark-indicator-active-bg: $light;
+    $carousel-dark-caption-color: $light;
+
+    .navbar-theme {
+        background-color: $dark;
+        color: $light;
+    }
+}

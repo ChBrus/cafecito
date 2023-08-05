@@ -1,4 +1,5 @@
 @import './custom-variables';
+@import './custom-variables-dark';
 
 h1 {
     font-family: "Times New Roman", Times, serif;
@@ -15,8 +16,39 @@ h1 {
     color: $dark;
 }
 
+.navbar-theme {
+    background-color: $secondary;
+    color: $light;
+}
+
+.pcustom-news {
+    padding: 0 6rem;
+}
+
+.pcustom-news-title {
+    padding: 0 3rem;
+}
+
+.carousel-indicators {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin-right: 15%;
+    margin-bottom: -1rem;
+    margin-left: 15%;
+}
+
 @media (max-width: map-get($grid-breakpoints, sm)) {
     .navbar-expand-xxl .offcanvas, .navbar-expand-xxl .offcanvas-end {
-      width: 100%;
+        width: 100%;
+    }
+
+    .pcustom-news, .pcustom-news-title {
+        padding: 0;
     }
 }

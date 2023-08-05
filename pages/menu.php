@@ -17,9 +17,9 @@
 </head>
 <body>
     <?= PageBuilder::buildHeader() ?>
-    <main class="container-fluid my-4">
+    <article class="container-fluid my-4">
         Something
-    </main>
+    </article>
     <!-- JavaScript scripts -->
     <?= PageBuilder::buildScripts() ?>
 </body>

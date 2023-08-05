@@ -13,10 +13,10 @@
         public static function buildHeader() {
             ob_start();
             ?>
-                <header class="navbar navbar-expand-xxl bg-secondary">
+                <header class="navbar navbar-expand-xxl navbar-theme">
                     <div class="container-fluid">
-                        <h1 class="text-light display-3">El Cafecito</h1>
-                        <button class="btn btn-secondary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                        <h1 class="display-3">El Cafecito</h1>
+                        <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                             <span class="bi bi-list display-6 icon-custom"></span>
                         </button>
 
@@ -26,7 +26,7 @@
                                 <h5 class="offcanvas-title" id="offcanvasRightLabel">Explorador</h5>
                                 <button type="button" class="btn btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                             </div>
-                            <div class="offcanvas-body" id="canvas-body">
+                            <div class="offcanvas-body vstack" id="canvas-body">
                                 <ul class="nav nav-pills flex-column">
                                     <li class="nav-item">
                                         <a class="nav-link" href="<?= self::HOME() ?>">Home</a>
@@ -55,6 +55,28 @@
                                         </ul>
                                     </li>
                                 </ul>
+                                <div class="dropdown dropup mt-auto">
+                                    <button class="btn btn-link px-0 text-decoration-none dropdown-toggle d-flex align-items-center fs-5 ms-auto" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme (auto)">
+                                        <span class="bi bi-circle-half" id="bd-theme-text"></span>
+                                    </button>
+                                    <ul class="dropdown-menu dropdown-menu-end shadow bg-third" aria-labelledby="bd-theme">
+                                    <li>
+                                        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false" id="theme-option">
+                                        Light
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false" id="theme-option">
+                                        Dark
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto" aria-pressed="false" id="theme-option">
+                                        Auto
+                                        </button>
+                                    </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -95,10 +117,10 @@
         public static function buildNewsStand() {
             ob_start();
             ?>
-                <div id="carouselExampleAutoplaying" class="carousel slide px-5 mx-5" data-bs-ride="carousel">
-                    <!-- <div class="carousel-indicators">
+                <div id="carouselExampleAutoplaying" class="carousel slide pcustom-news" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    </div> -->
+                    </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active d-flex justify-content-center">
                             <div class="alert alert-info" role="alert">

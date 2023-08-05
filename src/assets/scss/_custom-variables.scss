@@ -6,7 +6,7 @@ $light: #f3f6f2;
 $third: #b2a089;
 $fourth: #7a5135;
 $info: #8abdca;
-$body-color: $light;
+$body-color: $dark;
 $body-bg: $primary;
 
 $theme-colors: (
@@ -22,12 +22,12 @@ $theme-colors: (
 );
 
 $grid-breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px,
-  xxl: 2000px
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 2000px
 );
 
 // Offcanvas custom
@@ -42,6 +42,7 @@ $nav-pills-link-active-bg: $third;
 $nav-pills-link-active-color: $light;
 $dropdown-link-hover-color: $light;
 $dropdown-link-hover-bg: $dark;
+$dropdown-min-width: 100%;
 
 // Spinner
 $spinner-width: 5rem;
