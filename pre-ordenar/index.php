@@ -2,11 +2,12 @@
     require '../functions.php';
 
     //The url you wish to send the POST request to
-    $url = $_SERVER['HTTP_HOST'] . getSecondSlash($_SERVER['REQUEST_URI'], $_SERVER['HTTP_HOST']) . 'pages/pre-ordenar.php';
+    $url = $_SERVER['HTTP_HOST'] . getProjectURL($_SERVER['REQUEST_URI']) . 'pages/pre-ordenar.php';
 
     //The data you want to send via POST
     $fields = [
-        'DIRECTORY' => substr($_SERVER['PHP_SELF'], 0, strpos($_SERVER['PHP_SELF'], 'pre-ordenar/index.php'))
+        'DIRECTORY' => getAbsoluteProjectURL($_SERVER['REQUEST_URI']),
+        'ROOT' => getProjectURL($_SERVER['REQUEST_URI'])
     ];
 
     //url-ify the data for the POST

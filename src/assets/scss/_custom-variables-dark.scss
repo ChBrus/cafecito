@@ -1,7 +1,6 @@
 $color-mode-type: data;
 
 @include color-mode(dark) {
-    // Aquí redefine las variables de color para el modo "dark"
     $primary: #6b5f4b;
     $secondary: #4c2c17;
     $dark: #1c150f;
@@ -11,12 +10,29 @@ $color-mode-type: data;
     $info: #7aa6b2;
     $body-color: $light;
     $body-bg: $primary;
+    $black: #000;
+    $white: #fff;
 
-    $carousel-dark-indicator-active-bg: $light;
-    $carousel-dark-caption-color: $light;
+    $carousel-dark-indicator-active-bg: $white;
+    $carousel-dark-caption-color: $white;
+
+    $nav-link-color: $light;
+    $nav-link-hover-color: $white;
+    $nav-pills-link-active-bg: $third;
+    // $nav-pills-link-active-color: $light;
+    $dropdown-color: $light;
+    $dropdown-bg: $fourth;
+    $dropdown-link-color: $dropdown-dark-color;
+    $dropdown-link-hover-color: $info;
+    $dropdown-link-hover-bg: rgba($white, .15);
 
     .navbar-theme {
         background-color: $dark;
+        color: $light;
+    }
+
+    .offcanvas-theme {
+        background-color: $fourth;
         color: $light;
     }
 }

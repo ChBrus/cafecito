@@ -11948,6 +11948,10 @@ textarea.form-control-lg {
   background-color: #1c150f;
   color: #d6d9d2;
 }
+[data-bs-theme=dark] .offcanvas-theme {
+  background-color: #54351f;
+  color: #d6d9d2;
+}
 
 h1, .h1 {
   font-family: "Times New Roman", Times, serif;
@@ -11969,6 +11973,11 @@ h1, .h1 {
   color: #f3f6f2;
 }
 
+.offcanvas-theme {
+  background-color: #7a5135;
+  color: #f3f6f2;
+}
+
 .pcustom-news {
   padding: 0 6rem;
 }
@@ -11978,17 +11987,7 @@ h1, .h1 {
 }
 
 .carousel-indicators {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 2;
-  display: flex;
-  justify-content: center;
-  padding: 0;
-  margin-right: 15%;
   margin-bottom: -1rem;
-  margin-left: 15%;
 }
 
 @media (max-width: 576px) {

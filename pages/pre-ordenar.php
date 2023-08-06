@@ -1,7 +1,5 @@
 <?php
-    $nombre_carpeta = $_POST['DIRECTORY']; // Reemplaza 'nombre_de_la_carpeta' por el nombre enviado anteriormente
-    $directorio = $_SERVER['DOCUMENT_ROOT'] . ($_SERVER['HTTP_HOST'] === 'cafecito.com' ? '' : "/$nombre_carpeta/");
-    require $directorio . 'vendor/autoload.php';
+    require $_POST['DIRECTORY'] . 'vendor/autoload.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,16 +7,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="page-name" content="Pre-ordenar">
-    <?= WebTools\PageBuilder::buildIcons() ?>
-    <?= WebTools\PageBuilder::buildCustomBootstrap() ?>
+    <?= WebTools\PageBuilder::buildIcons($_POST['ROOT']) ?>
+    <?= WebTools\PageBuilder::buildCustomBootstrap($_POST['ROOT']) ?>
     <title>Pre ordenar</title>
 </head>
 <body>
-    <?= WebTools\PageBuilder::buildHeader() ?>
+    <?= WebTools\PageBuilder::buildHeader($_POST['ROOT']) ?>
     <main class="container-fluid my-4">
         Something
     </main>
     <!-- JavaScript scripts -->
-    <?= WebTools\PageBuilder::buildScripts() ?>
+    <?= WebTools\PageBuilder::buildScripts($_POST['ROOT']) ?>
 </body>
 </html>

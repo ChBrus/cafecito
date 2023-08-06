@@ -8,9 +8,10 @@
 
         /**
          * Retorna un header para que todo el sitio tenga el mismo estilo de cabecera
+         * @param mixed $root La raíz de mi proyecto
          * @return mixed Cabeceras que estarán en todo el sitio web
         */
-        public static function buildHeader() {
+        public static function buildHeader($root) {
             ob_start();
             ?>
                 <header class="navbar navbar-expand-xxl navbar-theme">
@@ -21,7 +22,7 @@
                         </button>
 
                         <!-- Offcanvas -->
-                        <div class="offcanvas offcanvas-end bg-fourth text-light" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                        <div class="offcanvas offcanvas-end offcanvas-theme" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
                             <div class="offcanvas-header">
                                 <h5 class="offcanvas-title" id="offcanvasRightLabel">Explorador</h5>
                                 <button type="button" class="btn btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -29,13 +30,13 @@
                             <div class="offcanvas-body vstack" id="canvas-body">
                                 <ul class="nav nav-pills flex-column">
                                     <li class="nav-item">
-                                        <a class="nav-link" href="<?= self::HOME() ?>">Home</a>
+                                        <a class="nav-link" href="<?= $root ?>">Home</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="<?= self::HOME() ?>menu/">Menú</a>
+                                        <a class="nav-link" href="<?= $root ?>menu/">Menú</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="<?= self::HOME() ?>pre-ordenar/">Pre-ordenar</a>
+                                        <a class="nav-link" href="<?= $root ?>pre-ordenar/">Pre-ordenar</a>
                                     </li>
                                     <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false">Configuración</a>
@@ -59,7 +60,7 @@
                                     <button class="btn btn-link px-0 text-decoration-none dropdown-toggle d-flex align-items-center fs-5 ms-auto" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme (auto)">
                                         <span class="bi bi-circle-half" id="bd-theme-text"></span>
                                     </button>
-                                    <ul class="dropdown-menu dropdown-menu-end shadow bg-third" aria-labelledby="bd-theme">
+                                    <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme">
                                     <li>
                                         <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false" id="theme-option">
                                         Light
@@ -85,31 +86,31 @@
             return ob_get_clean();
         }
 
-        public static function buildScripts() {
+        public static function buildScripts($root) {
             ob_start();
             ?>
-                <script src="<?= self::HOME() ?>vendor/twbs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-                <script src="<?= self::HOME() ?>src/assets/js/canvasBody.js"></script>
+                <script src="<?= $root ?>vendor/twbs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+                <script src="<?= $root ?>src/assets/js/canvasBody.js"></script>
             <?php
             return ob_get_clean();
         }
 
-        public static function buildCustomBootstrap() {
+        public static function buildCustomBootstrap($root) {
             ob_start();
             ?>
-                <link rel="stylesheet" href="<?= self::HOME() ?>src/assets/css/boostrap.css">
-                <link rel="stylesheet" href="<?= self::HOME() ?>src/assets/css/bootstrap-icons.css">
+                <link rel="stylesheet" href="<?= $root ?>src/assets/css/boostrap.css">
+                <link rel="stylesheet" href="<?= $root ?>src/assets/css/bootstrap-icons.css">
             <?php
             return ob_get_clean();
         }
 
-        public static function buildIcons() {
+        public static function buildIcons($root) {
             ob_start();
             ?>
-                <link rel="icon" href="<?= self::HOME() ?>src/assets/images/cafecito_icon.png" sizes="16x16" type="image/x-icon">
-                <link rel="icon" href="<?= self::HOME() ?>src/assets/images/cafecito_icon.png" sizes="32x32" type="image/x-icon">
-                <link rel="icon" href="<?= self::HOME() ?>src/assets/images/cafecito_icon.png" sizes="64x64" type="image/x-icon">
-                <link rel="icon" href="<?= self::HOME() ?>src/assets/images/cafecito_icon.png" sizes="128x128" type="image/x-icon">
+                <link rel="icon" href="<?= $root ?>src/assets/images/cafecito_icon.png" sizes="16x16" type="image/x-icon">
+                <link rel="icon" href="<?= $root ?>src/assets/images/cafecito_icon.png" sizes="32x32" type="image/x-icon">
+                <link rel="icon" href="<?= $root ?>src/assets/images/cafecito_icon.png" sizes="64x64" type="image/x-icon">
+                <link rel="icon" href="<?= $root ?>src/assets/images/cafecito_icon.png" sizes="128x128" type="image/x-icon">
             <?php
             return ob_get_clean();
         }
@@ -139,10 +140,6 @@
                 </div>
             <?php
             return ob_get_clean();
-        }
-
-        public static function HOME() {
-            return $_SERVER['HTTP_HOST'] === 'localhost' ? '/cafecito/' : '/';
         }
     }
 ?>
