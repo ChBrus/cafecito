@@ -5,6 +5,8 @@ $dark: #2f241c;
 $light: #f3f6f2;
 $third: #b2a089;
 $fourth: #7a5135;
+$fifth: #b6aea2;
+$sixth: #ac9b94;
 $info: #8abdca;
 $body-color: $dark;
 $body-bg: $primary;
@@ -14,6 +16,8 @@ $theme-colors: (
     "secondary": $secondary,
     "third": $third,
     "fourth": $fourth,
+    "fifth": $fifth,
+    "sixth": $sixth,
     "dark": $dark,
     "light": $light,
     "info": $info,
@@ -40,8 +44,14 @@ $btn-close-color: $light;
 // nav-link active
 $nav-pills-link-active-bg: $third;
 $nav-pills-link-active-color: $light;
+
+// dropdown
+$dropdown-color: $dark;
+$dropdown-bg: $third;
 $dropdown-link-hover-color: $light;
 $dropdown-link-hover-bg: $dark;
+$dropdown-link-active-color: $light;
+$dropdown-link-active-bg: $secondary;
 $dropdown-min-width: 100%;
 
 // Spinner

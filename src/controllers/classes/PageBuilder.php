@@ -40,7 +40,7 @@
                                     </li>
                                     <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false">Configuración</a>
-                                        <ul class="dropdown-menu bg-third">
+                                        <ul class="dropdown-menu">
                                             <li>
                                                 <a class="dropdown-item" href="#">Sign-in</a>
                                             </li>
@@ -58,22 +58,28 @@
                                 </ul>
                                 <div class="dropdown dropup mt-auto">
                                     <button class="btn btn-link px-0 text-decoration-none dropdown-toggle d-flex align-items-center fs-5 ms-auto" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme (auto)">
-                                        <span class="bi bi-circle-half" id="bd-theme-text"></span>
+                                        <span class="bi bi-circle-half" id="bd-theme-text" theme-icon-active></span>
                                     </button>
                                     <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme">
                                     <li>
                                         <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false" id="theme-option">
-                                        Light
+                                            <span class="bi bi-brightness-high-fill" id="bd-theme-text"></span>
+                                            &nbsp;
+                                            Light
                                         </button>
                                     </li>
                                     <li>
-                                        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false" id="theme-option">
-                                        Dark
+                                        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark-custom" aria-pressed="false" id="theme-option">
+                                            <span class="bi bi-moon-stars-fill" id="bd-theme-text"></span>
+                                            &nbsp;
+                                            Dark
                                         </button>
                                     </li>
                                     <li>
                                         <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto" aria-pressed="false" id="theme-option">
-                                        Auto
+                                            <span class="bi bi-circle-half" id="bd-theme-text"></span>
+                                            &nbsp;
+                                            Auto
                                         </button>
                                     </li>
                                     </ul>
@@ -90,6 +96,7 @@
             ob_start();
             ?>
                 <script src="<?= $root ?>vendor/twbs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+                <script type="module" src="<?= $root ?>src/assets/js/color-modes.js"></script>
                 <script src="<?= $root ?>src/assets/js/canvasBody.js"></script>
             <?php
             return ob_get_clean();
@@ -118,7 +125,7 @@
         public static function buildNewsStand() {
             ob_start();
             ?>
-                <div id="carouselExampleAutoplaying" class="carousel slide pcustom-news" data-bs-ride="carousel">
+                <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                     </div>

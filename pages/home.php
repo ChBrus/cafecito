@@ -4,7 +4,7 @@
     use WebTools\PageBuilder;
 ?>
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,8 +15,8 @@
 </head>
 <body>
     <?= PageBuilder::buildHeader($_POST['ROOT']) ?>
-    <main class="container-fluid my-4" id="NewsStand">
-        <h2 class="pcustom-news-title">¿Qué hay de nuevo?</h2>
+    <main class="container-sm" id="NewsStand">
+        <h2 class="">¿Qué hay de nuevo?</h2>
         <?= PageBuilder::buildNewsStand() ?>
     </main>
     <!-- JavaScript scripts -->

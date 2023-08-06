@@ -1,38 +1,52 @@
-$color-mode-type: data;
-
-@include color-mode(dark) {
-    $primary: #6b5f4b;
-    $secondary: #4c2c17;
-    $dark: #1c150f;
-    $light: #d6d9d2;
-    $third: #998d74;
-    $fourth: #54351f;
-    $info: #7aa6b2;
-    $body-color: $light;
-    $body-bg: $primary;
-    $black: #000;
-    $white: #fff;
+[data-bs-theme="dark-custom"] {
+    --bs-primary: #3d362e;
+    --bs-primary-rgb: 61, 54, 46;
+    --bs-secondary: #755640;
+    --bs-secondary-rgb: 117, 86, 64;
+    --bs-dark: #1a1612;
+    --bs-dark-rgb: 26, 22, 18;
+    --bs-light: #d6d9d2;
+    --bs-light-rgb: 214, 217, 210;
+    --bs-third: #998d74;
+    --bs-third-rgb: 153, 141, 116;
+    --bs-fourth: #54351f;
+    --bs-fourth-rgb: 84, 53, 31;
+    --bs-fifth: #b6aea2;
+    --bs-fifth-rgb: 182, 174, 162;
+    --bs-sixth: #ac9b94;
+    --bs-sixth-rgb: 172, 155, 148;
+    --bs-info: #8abdca;
+    --bs-info-rgb: 138, 189, 202;
+    --bs-body-color: var(--bs-light);
+    --bs-body-bg: var(--bs-dark);
 
     $carousel-dark-indicator-active-bg: $white;
     $carousel-dark-caption-color: $white;
 
-    $nav-link-color: $light;
-    $nav-link-hover-color: $white;
-    $nav-pills-link-active-bg: $third;
-    // $nav-pills-link-active-color: $light;
-    $dropdown-color: $light;
-    $dropdown-bg: $fourth;
-    $dropdown-link-color: $dropdown-dark-color;
-    $dropdown-link-hover-color: $info;
-    $dropdown-link-hover-bg: rgba($white, .15);
-
     .navbar-theme {
-        background-color: $dark;
-        color: $light;
+        background-color: var(--bs-fourth);
+        color: var(--bs-light);
     }
 
     .offcanvas-theme {
-        background-color: $fourth;
-        color: $light;
+        background-color: var(--bs-dark);
+        color: var(--bs-light);
+    }
+    
+    .nav-pills {
+        // nav-link active
+        --bs-nav-pills-link-active-bg: var(--bs-fourth);
+        --bs-nav-pills-link-active-color: var(--bs-light);
+        --bs-nav-pills-border-radius: var(--bs-border-radius);
+    }
+
+    .dropdown-menu {
+        // dropdown
+        --bs-dropdown-color: var(--bs-light);
+        --bs-dropdown-bg: var(--bs-primary);
+        --bs-dropdown-link-hover-color: var(--bs-light);
+        --bs-dropdown-link-hover-bg: var(--bs-third);
+        --bs-dropdown-link-active-color: var(--bs-light);
+        --bs-dropdown-link-active-bg: var(--bs-secondary);
     }
 }
