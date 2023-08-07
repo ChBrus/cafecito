@@ -12175,6 +12175,10 @@ textarea.form-control-lg {
   --bs-dropdown-link-hover-bg: var(--bs-third);
   --bs-dropdown-link-active-color: var(--bs-light);
   --bs-dropdown-link-active-bg: var(--bs-secondary);
+  --bs-dropdown-link-disabled-color: var(--bs-light);
+}
+[data-bs-theme=dark-custom] .dropdown-item.disabled, [data-bs-theme=dark-custom] .dropdown-item:disabled {
+  background-color: var(--bs-dropdown-link-active-bg);
 }
 
 h1, .h1 {

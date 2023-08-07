@@ -51,10 +51,6 @@
             return;
         }
 
-        if (theme === 'dark-custom') {
-            return; // Si el tema es "dark-custom", no realizamos cambios.
-        }
-
         const themeSwitcherText = document.querySelector('#bd-theme-text');
         const activeThemeIcon = document.querySelector('#bd-theme span[theme-icon-active]');
         const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`);

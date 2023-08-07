@@ -14,7 +14,8 @@
     "autoload": {
         "psr-4": {
             "DB\\": "src/models/core/",
-            "WebTools\\": "src/controllers/classes/"
+            "WebTools\\": "src/controllers/classes/",
+            "Roles\\": "src/models/roles"
         },
         "files": [
             

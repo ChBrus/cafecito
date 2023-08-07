@@ -42,7 +42,7 @@
                                         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false">Configuración</a>
                                         <ul class="dropdown-menu">
                                             <li>
-                                                <a class="dropdown-item" href="#">Sign-in</a>
+                                                <a class="dropdown-item" href="<?= $root ?>sign-in/">Sign-in</a>
                                             </li>
                                             <li>
                                                 <a class="dropdown-item" href="#">Log-in</a>
